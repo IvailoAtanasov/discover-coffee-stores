@@ -1,6 +1,5 @@
 .container {
   margin-bottom: 14rem /* 224px */;
-  
 }
 
 .main {
@@ -10,8 +9,6 @@
   max-width: 72rem /* 1152px */;
   padding-left: 1rem /* 16px */;
   padding-right: 1rem /* 16px */;
-
- 
 }
 
 .heroImage {
@@ -31,6 +28,13 @@
   justify-content: center;
 }
 
+.heading2 {
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  padding-bottom: 2rem;
+  margin-top: 2rem;
+  color: var(--text-white-100);
+}
 
 /** Breakpoints:
   sm: min-width: 640px;
@@ -44,14 +48,12 @@
   .container {
     padding-left: 1rem /* 16px */;
     padding-right: 1rem /* 16px */;
-    
   }
 
   .main {
     margin-top: 3rem /* 48px */;
     padding-left: 1.5rem /* 24px */;
     padding-right: 1.5rem /* 24px */;
-    
   }
 
   .cardLayout {
@@ -63,7 +65,6 @@
   .container {
     padding-left: 2.5rem /* 40px */;
     padding-right: 2.5rem /* 40px */;
-    
   }
 
   .main {
@@ -83,7 +84,6 @@
   .container {
     padding-left: 2.5rem /* 40px */;
     padding-right: 2.5rem /* 40px */;
-    
   }
   .main {
     margin-top: 5rem /* 80px */;
@@ -94,7 +94,7 @@
     right: 20%;
   }
 
-  .cardLayout {  
+  .cardLayout {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
@@ -104,7 +104,7 @@
     margin-top: 7rem /* 112px */;
   }
 
-  .cardLayout {  
+  .cardLayout {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }

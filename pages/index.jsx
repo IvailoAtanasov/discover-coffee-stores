@@ -4,7 +4,7 @@ import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import Banner from "../components/banner";
 import Card from "@/components/card";
-import coffeeStores from "../data/coffee-stores";
+import coffeeStoresData from "../data/coffee-stores";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -12,7 +12,7 @@ export async function getStaticProps(context) {
   // const data = fetch()
   return {
     props: {
-      coffeeStores,
+      coffeeStores: coffeeStoresData,
     },
   };
 }
@@ -45,20 +45,25 @@ export default function Home(props) {
           />
         </div>
 
-        <div className={styles.cardLayout}>
-          {props.coffeeStores?.map((store) => {
-            return (
-              <Card
-                key={store.id}
-                name={store.name}
-                imageUrl={store.imgUrl}
-                href={`/coffee-store/${store.id}`}
-                imgAlt="dark-house-shop"
-                className={styles.card}
-              />
-            );
-          })}
-        </div>
+        {props.coffeeStores.length > 0 && (
+          <>
+            <h2 className={styles.heading2}>Toronto Stores</h2>
+            <div className={styles.cardLayout}>
+              {props.coffeeStores?.map((store) => {
+                return (
+                  <Card
+                    key={store.id}
+                    name={store.name}
+                    imageUrl={store.imgUrl}
+                    href={`/coffee-store/${store.id}`}
+                    imgAlt="dark-house-shop"
+                    className={styles.card}
+                  />
+                );
+              })}
+            </div>
+          </>
+        )}
       </main>
     </div>
   );
